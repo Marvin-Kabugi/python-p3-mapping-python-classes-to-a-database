@@ -22,6 +22,7 @@ class TestClass:
         Song.create_table()
 
         song = Song("Hold On", "Born to Sing")
+        print(song.name)
         song.save()
         db_song = CURSOR.execute(
             'SELECT * FROM songs WHERE name=? AND album=?',
